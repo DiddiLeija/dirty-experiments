@@ -34,7 +34,7 @@ class SafeBox(object):
 if __name__ == "__main__":
     instance = SafeBox()
     for item in ("a", "b", "c", "d", "e", "f", "g", "h"):
-        print(f"'{item}' ", end="")
+        print(f"'{item}': ", end="")
         try:
             getattr(item)
             print("True")
