@@ -1,3 +1,11 @@
+# This giant ignore list will ignore the stuff from all
+# the supported languages that I am using here. This includes:
+#
+# - Python stuff
+# - C++ stuff
+# - Lua stuff
+# - Misc stuff (shared by almost)
+
 ##### Python stuff #####
 
 # Byte-compiled / optimized / DLL files
@@ -194,3 +202,8 @@ luac.out
 *.i*86
 *.x86_64
 *.hex
+
+##### Other misc items #####
+
+# Mac items
+.DS_Store
