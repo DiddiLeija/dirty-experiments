@@ -16,3 +16,5 @@ var MyClass = {
 
 This example shows a trick that I use when programming with JavaScript. Also, I added a simple HTML to test how the
 script works (you don't need `Node.js` to run this).
+
+_NOTE: I haven't finished this yet, so don't get surprised if you get a weird result on your browser!_
