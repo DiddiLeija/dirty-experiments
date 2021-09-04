@@ -21,7 +21,7 @@ int main(){
 	float number;
 	
 	// store an input
-	cout<<"Introduce a floating number:\n";
+	cout<<"Introduce a floating number:\n> ";
 	cin>>number;
 	
 	// retrieve
