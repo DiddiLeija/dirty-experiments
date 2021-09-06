@@ -27,7 +27,11 @@ The code will try to use the
 namespace `std` for the IO, so you should check that first. Also I am taking
 a standard library named `iostream` (also check that!).
 
-On the "integer" prompt, you could enter a floating number, but it will be truncated. See this example:
+### Possible value changes
+
+In most of the C++ interpreters, you may see this glitches:
+
+- On the "integer" prompt, you could enter a floating number, but it will be truncated. See this example:
 
 ```
 Introduce an integer:
@@ -37,4 +41,16 @@ Introduce an integer:
 
 Integer introduced:
 123
+```
+
+- If you enter text to a numeric prompt, C++ converts it into a 0:
+
+```
+Introduce a floating number:
+> hello world
+
+[...]
+
+Floating introduced:
+0
 ```
