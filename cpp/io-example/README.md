@@ -11,11 +11,17 @@ Introduce a floating number:
 Introduce an integer:
 > 501
 
+Introduce a name (10 characters or less):
+> Diego
+
 Floating introduced:
 3.1416
 
 Integer introduced:
 501
+
+Name (text) introduced:
+Diego
 
 ```
 
