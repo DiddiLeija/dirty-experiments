@@ -1,4 +1,4 @@
-# Math operations with C++ :man_scientist:
+# Math operations with C++
 
 C++ has a `math.h` header, to provide multiple math functions. On this section, I would like to experiment with those operations. I will take
 4 floating numbers from the user (`a`, `b`, `c`, `d`) to resolve this:
