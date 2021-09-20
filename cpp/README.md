@@ -1,9 +1,12 @@
 # Experiments with C++ :desktop_computer:
 
 ```cpp
-#include <stdio.h>
+#include <iostream>
 
-print("I want to be a C++ expert!");
+int main () {
+    cout<<"I want to be a C++ expert!";
+    return 0;
+}
 ```
 
 I like C++, because I can use it on many, many projects.
