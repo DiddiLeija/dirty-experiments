@@ -35,7 +35,8 @@ a standard library named `iostream` (also check that!).
 
 ### Possible value changes
 
-In most of the C++ interpreters, you may see this glitches:
+In most of the C++ interpreters, you may see this "glitches" (well, they are normal behaviors,
+but they are a bit confusing for new programmers):
 
 - On the "integer" prompt, you could enter a floating number, but it will be truncated. See this example:
 
@@ -49,14 +50,38 @@ Integer introduced:
 123
 ```
 
-- If you enter text to a numeric prompt, C++ converts it into a 0:
+- If you enter text to a numeric prompt ("Integer", "Floating number"), C++ converts it into a 0:
 
 ```
+Introduce an integer:
+> i'm a c++ program
+
 Introduce a floating number:
 > hello world
 
 [...]
 
+Integer introduced:
+0
+
 Floating introduced:
 0
+```
+
+- On the "name" prompt, if the text has more than 10 characters, it will be trucated:
+
+```
+Introduce a name (10 characters or less):
+> Obi-wan Kenobi
+
+[...]
+
+Name (text) introduced:
+Obi-wan Ke
+```
+
+This is due to this line on the C++ source:
+
+```cpp
+char name[10];
 ```
