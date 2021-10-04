@@ -11,3 +11,13 @@ Enter code: 404
 
 Meaning: Page not found
 ```
+
+## Notes
+
+- If you enter an unexpected code, like `732`, a no-op will happen:
+
+```
+Enter code: 732
+
+Meaning:
+```
