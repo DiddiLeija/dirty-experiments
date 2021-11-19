@@ -1,8 +1,16 @@
-"Play with the __getattr__ method from class creation."
+"""
+Play with the __getattr__ method from classes and instances.
+This example will test the possibility of modifying the
+variable access using __getattr__, and its counterpart __getattribute__.
+"""
 
-# generate a "safe box" object
+
+# Generate a "safe box" object
 class SafeBox(object):
-    "the class contains many attributes: try to get them!"
+    """
+    This class contains many attributes: all of them
+    exist, but they may not be accessible!
+    """
     a = 1.23456789
     b = 214194
     c = "a string"
@@ -11,11 +19,14 @@ class SafeBox(object):
     f = ["i", "love", "python"]
     g = {"bytes": "no", "unicode": "yeah!"}
     h = """Maybe a large code here..."""
-    # now, here's the hint:
+    # Now, here's the hint: the list
+    # below has picked the names of variables.
+    # Our __getattribute__ will look for this
+    # variable to decide what to return...
     allowed = ["a", "c", "e", "g", "f"]  # look for this one at the __getattr__
 
     def __getattribute__(self, name):
-        "some names are forbidden!"
+        "some names here are forbidden!"
         try:
             res = object.__getattr__(self, name)
         except:
@@ -26,7 +37,7 @@ class SafeBox(object):
             return res
 
     def __getattr__(self, name):
-        "some names are forbidden!"
+        "some names here are forbidden!"
         return self.__getattribute__(self, name)
 
 
@@ -39,5 +50,8 @@ if __name__ == "__main__":
             getattr(item)
             print("True")
         except AttributeError as exc:
+            # To avoid issues, and just for testing purposes,
+            # we made the code to just "catch and show",
+            # without crashing!
             print("False")
             print(f"  ({str(exc)})")
