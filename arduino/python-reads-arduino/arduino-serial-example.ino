@@ -8,7 +8,7 @@
   will approach this program for experimental reading.
 
   As an example, use the HC-05 Bluetooth module. Python will try to catch 
-  the "conversation" between the Bluetooth module and the COM3 serial.
+  the "conversation" between the Bluetooth module and the COM4 serial.
 ******************************************************************/
 
 #include <SoftwareSerial.h>
@@ -19,19 +19,19 @@ void setup() {
   /****************************************************************
     At this point we are talking about the requirements for the Python examples:
 
-    1. You must connect to port COM3 with 9600 bauds
-    2. Use the Python "time.sleep(1)" to breathe until Serial and BT are
-       ready.
-    3. Use a Python "while True:" or "while 1:" for reading, because Python
-       is not a loop, but Arduino is!
+    1. You must connect to port COM4, 9600 bauds
+    2. Tell Python to wait until Serial and BT are ready (we're
+       giving one second).
+    3. Use Python for reading on an infinite (but interruptible)
+       loop, just like Arduino does!
   *****************************************************************/
 
   // run once:
-  Serial.begin(9600); // Python communicators are using the 9600 bauds setup
+  Serial.begin(9600); // Python is using the 9600 bauds setup
   MyBTPort.begin(38400);
   Serial.println("Arduino Serial Ready!");
   Serial.println("Are you ready too, Python?");
-  delay(2000);  // give a short time (2 secs) to Python configuration
+  delay(2000);  // give a short time (2 secs) for Python configuration
 }
 
 void loop() {
