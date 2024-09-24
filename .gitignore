@@ -207,3 +207,8 @@ luac.out
 
 # Mac items
 .DS_Store
+
+##### Rust #####
+
+# pdb
+*.pdb
